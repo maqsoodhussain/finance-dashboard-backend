@@ -655,7 +655,7 @@ This implementation does not include rate limiting. Consider adding `express-rat
 ## Notes
 
 - In development, a default admin user is created: `admin` / `admin123`. Change this in production!
-- SQLite database file: `database.sqlite` (or in-memory for tests)
+
 - JWT tokens expire according to `JWT_EXPIRE` environment variable (default: 7 days)
 - All amounts are stored with 2 decimal places
 - Records are associated with users via `userId` foreign key

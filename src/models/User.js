@@ -41,7 +41,7 @@ const userSchema = new mongoose.Schema({
 // Indexes for faster queries
 userSchema.index({ role: 1 });
 userSchema.index({ status: 1 });
-userSchema.index({ username: 1 });
+// username field has unique: true which creates an index automatically
 
 // Instance methods
 userSchema.methods.isAdmin = function() {

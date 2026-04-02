@@ -52,8 +52,7 @@ const financialRecordSchema = new mongoose.Schema({
 // Indexes for faster queries
 financialRecordSchema.index({ userId: 1, date: -1 });
 financialRecordSchema.index({ date: -1 });
-financialRecordSchema.index({ type: 1 });
-financialRecordSchema.index({ category: 1 });
+// type and category have index: true in schema definition
 
 // Virtual for net amount (negative for expense)
 financialRecordSchema.virtual('signedAmount').get(function() {

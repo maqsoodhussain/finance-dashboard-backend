@@ -5,11 +5,7 @@ const connectDB = async () => {
   try {
     const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/finance_dashboard';
 
-    await mongoose.connect(mongoURI, {
-      // These options are no longer needed in Mongoose 6+ but kept for clarity
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(mongoURI);
 
     console.log('✅ Connected to MongoDB');
     return mongoose.connection;
